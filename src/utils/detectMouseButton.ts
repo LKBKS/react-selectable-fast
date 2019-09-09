@@ -7,10 +7,6 @@ import { MouseEvent } from 'react'
  * 3: Right/Back button
  */
 export function detectMouseButton(evt: MouseEvent<HTMLElement>, buttonNumber = 1) {
-  if (evt.metaKey || evt.ctrlKey || evt.altKey || evt.shiftKey) {
-    return false
-  }
-
   if ('buttons' in evt) {
     return evt.buttons === buttonNumber
   }
